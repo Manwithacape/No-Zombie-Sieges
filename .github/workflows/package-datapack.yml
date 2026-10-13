@@ -1,0 +1,27 @@
+name: Package datapack
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create datapack archive
+        working-directory: NZS Datapack
+        run: zip -r ../NZS-Datapack.zip .
+
+      - name: Upload datapack artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NZS-Datapack
+          path: NZS-Datapack.zip
+          if-no-files-found: error

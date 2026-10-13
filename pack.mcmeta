@@ -1,0 +1,19 @@
+{
+    "pack": {
+        "description": [
+            {
+                "text": "Disables Zombie Sieges. Made by ",
+                "color": "white"
+            },
+            {
+                "text": "Manwithacape!",
+                "color": "red"
+            }
+        ],
+        "min_format": 101,
+        "max_format": [
+            107,
+            1
+        ]
+    }
+}
